@@ -1,0 +1,104 @@
+/* styles/styles.css — simple, clean layout for WDD 130 homepage */
+:root {
+  --max-width: 900px;
+  --accent: #0b6fa4;
+  --muted: #555;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background: #f7fbff;
+  color: #222;
+}
+
+main {
+  max-width: var(--max-width);
+  padding: 1.25rem;
+}
+
+header {
+  width: 100%;
+  background: var(--accent);
+  color: white;
+  padding: 0.5rem 0;
+}
+
+nav {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+img {
+  display: block;
+  margin: 0.75rem 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(10, 10, 10, 0.06);
+}
+
+footer {
+  max-width: var(--max-width);
+  margin: 2rem auto 1rem;
+  padding: 0 1rem;
+  color: var(--muted);
+}
+/* Limit main width */
+main {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+/* Aside styling */
+aside {
+  width: 250px;
+  margin: 1rem auto;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  background-color: #f0f8ff; /* light background */
+  color: #000; /* good contrast */
+  text-align: center;
+}
+
+/* Aside image */
+aside img {
+  width: 200px;
+  height: auto; /* keeps aspect ratio */
+}
+
+/* Ensure profile img in main is separate */
+main img {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+}
+
+/* Paragraphs reset padding */
+p {
+  padding: 0;
+}
+
+/* Footer styling */
+footer {
+  margin-top: 2rem;
+  border-top: 2px solid #ccc;
+  text-align: center;
+  padding-top: 1rem;
+}

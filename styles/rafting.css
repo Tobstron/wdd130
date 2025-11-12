@@ -1,0 +1,130 @@
+:root {
+  --body-font: "Segoe UI", Roboto, Arial, sans-serif;
+  --heading-font: "Georgia", "Times New Roman", serif;
+  --primary-color: #0b6d91;     /* dark teal */
+  --accent1-color: #f39c12;     /* orange accent */
+  --bg-color: #ffffff;
+}
+
+/* reset box model */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--primary-color);
+  background: var(--bg-color);
+}
+
+/* limit page width and center */
+header, main, footer {
+  width: 840px;
+  margin: 0 auto;
+}
+
+/* header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+
+#logo {
+  height: 56px;
+  display: block;
+}
+
+/* nav */
+nav a {
+  margin-left: 12px;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* headings */
+h1, h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+/* basic spacing for elements */
+nav, p, section, article {
+  margin: 16px;
+  padding: 8px;
+}
+
+/* hero */
+.hero {
+  position: relative;
+  margin-top: 16px;
+  overflow: hidden;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* title overlay on hero */
+.hero h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  opacity: 0.85;
+  background-color: var(--accent1-color);
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+/* article overlay inside hero */
+.hero article {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background: rgba(255,255,255,0.9);
+  padding: 12px;
+  width: 300px;
+  border-radius: 6px;
+}
+
+/* image inside the hero article */
+.hero article img {
+  float: right;
+  width: 125px;
+  margin-left: 8px;
+  border-radius: 4px;
+}
+
+/* history and adventure sections */
+.history, .adventure {
+  margin-top: 220px; /* leave space so hero overlay doesn't cover */
+  padding: 12px;
+}
+
+/* footer */
+footer {
+  margin-top: 30px;
+  border-top: 2px solid #ddd;
+  text-align: center;
+  padding-top: 12px;
+}
+
+/* remove underline for social icons */
+.socialmedia a {
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 6px;
+}
+.socialmedia img {
+  width: 32px;
+  height: auto;
+  vertical-align: middle;
+}
