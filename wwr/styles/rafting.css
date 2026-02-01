@@ -52,6 +52,15 @@ nav ul.navigation a {
     padding: 8px;
 }
 
+nav ul.navigation a:hover {
+    background-color: var(--secondary-color);
+    color: var(--accent2-color);
+}
+
+.socialmedia a {
+    text-decoration: none;
+}
+
 /* Typography */
 h1,
 h2 {
