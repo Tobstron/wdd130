@@ -4,8 +4,8 @@
     --secondary-color: #00a5cf;
 
     --accent-bg: #e7f6f8;
-    --light-overlay: rgba(255, 255, 255, 0.9);
-    --primary-overlay: rgba(0, 78, 100, 0.8);
+    --light-overlay: color-mix(in srgb, var(--text-light) 90%, transparent);
+    --primary-overlay: color-mix(in srgb, var(--primary-color) 80%, transparent);
 
     --text-dark: #222222;
     --text-light: #ffffff;
