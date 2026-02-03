@@ -4,8 +4,8 @@
     --secondary-color: #00a5cf;
 
     --accent-bg: #e7f6f8;
-    --light-overlay: color-mix(in srgb, var(--text-light) 90%, transparent);
-    --primary-overlay: color-mix(in srgb, var(--primary-color) 80%, transparent);
+    --light-overlay: rgba(255, 255, 255, 0.9);
+    --primary-overlay: rgba(0, 78, 100, 0.85);
 
     --text-dark: #222222;
     --text-light: #ffffff;
@@ -63,8 +63,8 @@ nav ul.navigation a {
 }
 
 nav ul.navigation a:hover {
-    background-color: var(--secondary-color);
-    color: var(--text-light);
+    background-color: var(--secondary-color, #00a5cf);
+    color: var(--text-light, #ffffff);
     border-radius: 4px;
 }
 
@@ -96,15 +96,15 @@ section {
     width: 100%;
     text-align: center;
     padding: 16px;
-    background-color: var(--primary-overlay);
-    color: var(--text-light);
+    background-color: var(--primary-overlay, rgba(0, 78, 100, 0.85));
+    color: var(--text-light, #ffffff);
 }
 
 .hero article {
     position: absolute;
     bottom: 20px;
     left: 20px;
-    background-color: var(--light-overlay);
+    background-color: var(--light-overlay, rgba(255, 255, 255, 0.9));
     padding: 16px;
     max-width: 400px;
 }
@@ -137,8 +137,8 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--primary-color);
-    color: var(--text-light);
+    background-color: var(--primary-color, #004e64);
+    color: var(--text-light, #ffffff);
     padding: 12px;
 }
 
