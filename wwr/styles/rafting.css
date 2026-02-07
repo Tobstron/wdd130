@@ -4,7 +4,7 @@
     --secondary-color: #00a5cf;
 
     --accent-bg: #e7f6f8;
-    --light-overlay: rgba(160, 160, 160, 0.9);
+    --light-overlay: rgba(255, 255, 255, 0.9);
     --primary-overlay: rgba(0, 78, 100, 0.85);
 
     --text-dark: #222222;
@@ -71,7 +71,7 @@ nav ul.navigation a {
 
 nav ul.navigation a:hover {
     background-color: var(--secondary-color);
-    color: var(--text-light);
+    color: var(--text-dark);
     border-radius: 4px;
 }
 
