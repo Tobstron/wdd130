@@ -4,9 +4,6 @@
     --secondary-color: #00a5cf;
 
     --accent-bg: #e7f6f8;
-    --light-overlay: rgba(255, 255, 255, 0.9);
-    --primary-overlay: rgba(0, 78, 100, 0.85);
-
     --text-dark: #222222;
     --text-light: #ffffff;
 
@@ -21,19 +18,12 @@
     box-sizing: border-box;
 }
 
-/* Base Layout & Typography */
+/* Base Layout */
 body {
     font-family: var(--body-font);
     color: var(--text-dark);
     background-color: var(--accent-bg);
     line-height: 1.6;
-}
-
-section,
-article,
-p,
-figcaption {
-    color: var(--text-dark);
 }
 
 header,
@@ -43,43 +33,46 @@ footer {
     margin: 0 auto;
 }
 
-/* Header (CSS Grid) */
+/* Header (Grid) */
 header {
     display: grid;
     grid-template-columns: 120px 1fr;
     align-items: center;
     background-color: var(--text-light);
+    padding: 10px;
 }
 
 header img {
     width: 100px;
 }
 
-/* Navigation (Flexbox) */
+/* Navigation (Flex) */
 nav ul.navigation {
     display: flex;
-    list-style: none;
     justify-content: space-evenly;
+    list-style: none;
 }
 
 nav ul.navigation a {
     text-decoration: none;
     font-weight: bold;
     color: var(--primary-color);
-    padding: 8px 12px;
+    padding: 8px 14px;
 }
 
 nav ul.navigation a:hover {
     background-color: var(--secondary-color);
     color: var(--text-dark);
+    /* contrast fix */
     border-radius: 4px;
 }
 
-/* Headings & Text */
+/* Typography */
 h1,
 h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
+    text-align: center;
 }
 
 section {
@@ -87,7 +80,7 @@ section {
     padding: 16px;
 }
 
-/* Hero Section */
+/* HERO (About Page) */
 .hero {
     position: relative;
 }
@@ -101,9 +94,8 @@ section {
     position: absolute;
     top: 20px;
     width: 100%;
-    text-align: center;
     padding: 16px;
-    background-color: var(--primary-overlay);
+    background-color: rgba(0, 78, 100, 0.85);
     color: var(--text-light);
 }
 
@@ -111,8 +103,7 @@ section {
     position: absolute;
     bottom: 20px;
     left: 20px;
-    background-color: var(--light-overlay);
-    color: var(--text-dark);
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 16px;
     max-width: 400px;
 }
@@ -123,84 +114,96 @@ section {
     margin-left: 10px;
 }
 
-/* Adventure Images */
-figure {
-    display: inline-block;
-    width: 150px;
-    margin: 8px;
+/* CONTACT PAGE LAYOUT */
+
+/* Company Info */
+.contact-info {
     text-align: center;
+    margin-bottom: 20px;
 }
 
-figure img {
-    width: 100%;
+/* Map + Form side-by-side */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
 }
 
-figcaption {
-    font-size: 0.9rem;
-    margin-top: 4px;
-}
-
-/* Contact Page Styles */
-
-.contact-info iframe {
+/* Map */
+.contact-map iframe {
     width: 100%;
     height: 300px;
     border: none;
-    margin-top: 12px;
 }
 
-.employees {
-    display: flex;
-    justify-content: space-between;
-    gap: 16px;
-}
-
-.employees figure {
-    width: 30%;
-}
-
-.contact-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.contact-form label {
-    font-weight: bold;
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-    padding: 8px;
-    border: 1px solid #ccc;
+/* Form */
+form {
+    background-color: var(--text-light);
+    padding: 16px;
     border-radius: 4px;
-    font-family: var(--body-font);
 }
 
-.contact-form fieldset {
-    border: 1px solid #ccc;
-    padding: 12px;
-}
-
-.contact-form legend {
+form label {
+    display: block;
+    margin-top: 10px;
     font-weight: bold;
-    padding: 0 6px;
 }
 
-.contact-form button {
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 6px;
+    margin-top: 4px;
+}
+
+form textarea {
+    min-height: 100px;
+}
+
+.radio-group {
+    margin: 10px 0;
+}
+
+.radio-group label {
+    display: block;
+    font-weight: normal;
+}
+
+form button {
     margin-top: 12px;
     padding: 10px;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     color: var(--text-light);
     border: none;
-    border-radius: 4px;
-    font-size: 1rem;
     cursor: pointer;
+    width: 100%;
 }
 
-.contact-form button:hover {
-    background-color: var(--primary-color);
+form button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* EMPLOYEES SECTION */
+.employee-section {
+    text-align: center;
+}
+
+.employee-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.employee-grid figure {
+    text-align: center;
+}
+
+.employee-grid img {
+    width: 100%;
+    max-width: 120px;
 }
 
 /* Footer */
@@ -213,17 +216,9 @@ footer {
     padding: 12px;
 }
 
-footer p {
-    margin: 0;
-}
-
 .socialmedia {
     display: flex;
     gap: 10px;
-}
-
-.socialmedia a {
-    text-decoration: none;
 }
 
 .socialmedia img {
